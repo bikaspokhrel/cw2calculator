@@ -16,5 +16,13 @@ namespace cw2calculator
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            int Num1 = Convert.ToInt16(txtInput1.Text);
+            int Num2 = Convert.ToInt16(txtInput2.Text);
+            int Multiplication = Num1 * Num2;
+            lblOutput.Text = Convert.ToString(Multiplication);
+        }
     }
 }
