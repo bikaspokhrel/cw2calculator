@@ -20,13 +20,16 @@ namespace randomnumber
 
         private void BtnRandom_Click(object sender, EventArgs e)
         {
-            randomnumber();
+            int min = 1;
+            int max = 10;
+            int result = randomnumber(min, max);
+            MessageBox.Show(Convert.ToString(result));
         }
         
-        private void randomnumber()
+        private int randomnumber(int min, int max)
         {
             Random rdm = new Random(); // the random function is used here
-            MessageBox.Show(rdm.Next(1, 10).ToString()); //the random values between 1 to 100 is generated randomly here
+            return rdm.Next(1, 10); //the random values between 1 to 100 is generated randomly here
 
         }
 
